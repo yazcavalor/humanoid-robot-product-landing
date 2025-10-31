@@ -1,0 +1,389 @@
+/* File: src/components/MeetAssistant/MeetAssistant.css */
+
+.meet-assistant {
+  padding: 50px 0;
+  background: linear-gradient(180deg, #f8fafc 0%, #ffffff 100%);
+  position: relative;
+}
+
+.meet-assistant__container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 1rem;
+}
+
+.meet-section-header {
+  text-align: center;
+  margin-bottom: 4rem;
+}
+
+.meet-section-title {
+  font-size: 2.5rem;
+  font-weight: 700;
+  color: #1a202c;
+  margin-bottom: 1rem;
+}
+
+.meet-section-subtitle {
+  font-size: 1.2rem;
+  color: #4a5568;
+  max-width: 600px;
+  margin: 0 auto;
+  line-height: 1.6;
+}
+
+.meet-assistant__content {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 4rem;
+  align-items: center;
+  margin-bottom: 2rem;
+}
+
+/* Robot Portrait Styles */
+.robot-portrait {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.robot-portrait__container {
+  position: relative;
+  z-index: 2;
+}
+
+.robot-face {
+  width: 300px;
+  height: 300px;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  border-radius: 50%;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 20px 40px rgba(102, 126, 234, 0.3);
+}
+
+.robot-head {
+  position: relative;
+  width: 200px;
+  height: 200px;
+}
+
+.robot-eye {
+  width: 40px;
+  height: 40px;
+  background: #ffffff;
+  border-radius: 50%;
+  position: absolute;
+  top: 60px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: transform 0.2s ease;
+}
+
+.robot-eye.blink {
+  transform: scaleY(0.1);
+}
+
+.left-eye {
+  left: 40px;
+}
+
+.right-eye {
+  right: 40px;
+}
+
+.eye-pupil {
+  width: 20px;
+  height: 20px;
+  background: #333;
+  border-radius: 50%;
+  transition: transform 0.3s ease;
+}
+
+.robot-mouth {
+  position: absolute;
+  bottom: 45px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 60px;
+  height: 30px;
+  background: white;
+  border-radius: 0 0 50px 50px;
+}
+
+.mouth-line {
+  width: 100%;
+  height: 4px;
+  background: #333;
+  border-radius: 2px;
+  position: relative;
+}
+
+.personality-indicator {
+  position: absolute;
+  top: -20px;
+  right: -20px;
+  background: white;
+  border-radius: 50px;
+  padding: 1rem 1.5rem;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+  color: #667eea;
+  font-weight: 600;
+  font-size: 0.9rem;
+}
+
+.trait-icon {
+  width: 20px;
+  height: 20px;
+}
+
+/* Floating Elements */
+.floating-elements {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+}
+
+.float-element {
+  position: absolute;
+  width: 40px;
+  height: 40px;
+  background: rgba(255, 255, 255, 0.9);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+  color: #667eea;
+}
+
+.element-1 {
+  top: 10%;
+  left: 10%;
+}
+
+.element-2 {
+  bottom: 20%;
+  left: 15%;
+}
+
+.element-3 {
+  top: 30%;
+  right: 10%;
+}
+
+/* Robot Story Styles */
+.robot-story {
+  padding-left: 2rem;
+}
+
+.story-title {
+  font-size: 2rem;
+  font-weight: 700;
+  color: #1a202c;
+  margin-bottom: 1.5rem;
+  line-height: 1.3;
+}
+
+.story-description {
+  font-size: 1.1rem;
+  color: #4a5568;
+  line-height: 1.7;
+  margin-bottom: 2rem;
+}
+
+.personality-traits {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.trait {
+  padding: 1.5rem;
+  border-radius: 12px;
+  background: white;
+  border: 2px solid transparent;
+  transition: all 0.3s ease;
+  cursor: pointer;
+}
+
+.trait:hover,
+.trait--active {
+  border-color: #667eea;
+  transform: translateX(10px);
+  box-shadow: 0 10px 25px rgba(102, 126, 234, 0.1);
+}
+
+.trait-header {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  margin-bottom: 0.5rem;
+}
+
+.trait-header h4 {
+  font-size: 1.2rem;
+  font-weight: 600;
+  color: #1a202c;
+}
+
+.trait p {
+  color: #4a5568;
+  line-height: 1.6;
+}
+
+/* Use Cases Styles */
+.use-cases {
+  margin-top: 1rem;
+}
+
+.use-cases-title {
+  text-align: center;
+  font-size: 2rem;
+  font-weight: 700;
+  color: #1a202c;
+  margin-bottom: 3rem;
+}
+
+.use-cases-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 2rem;
+}
+
+.use-case-card {
+  background: white;
+  border-radius: 16px;
+  padding: 2rem;
+  transition: all 0.3s ease;
+  border: 1px solid #e2e8f0;
+}
+
+.use-case-header {
+  display: flex;
+  align-items: flex-start;
+  gap: 1rem;
+  margin-bottom: 1.5rem;
+}
+
+.icon-wrapper {
+  width: 60px;
+  height: 60px;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  border-radius: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  flex-shrink: 0;
+}
+
+.use-case-icon {
+  width: 28px;
+  height: 28px;
+}
+
+.use-case-info {
+  flex: 1;
+}
+
+.use-case-title {
+  font-size: 1.3rem;
+  font-weight: 700;
+  color: #1a202c;
+  margin-bottom: 0.25rem;
+}
+
+.use-case-subtitle {
+  font-size: 0.9rem;
+  color: #667eea;
+  font-weight: 500;
+}
+
+.use-case-description {
+  color: #4a5568;
+  line-height: 1.6;
+  margin-bottom: 1.5rem;
+}
+
+.use-case-features {
+  list-style: none;
+  padding: 0;
+}
+
+.use-case-features li {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  margin-bottom: 0.5rem;
+  color: #4a5568;
+  font-size: 0.9rem;
+}
+
+.feature-bullet {
+  color: #667eea;
+  font-weight: 700;
+  font-size: 1.2rem;
+}
+
+/* Responsive Design */
+@media (max-width: 1024px) {
+  .meet-assistant__content {
+    grid-template-columns: 1fr;
+    gap: 3rem;
+    text-align: center;
+  }
+
+  .robot-story {
+    padding-left: 0;
+  }
+
+  .trait--active,
+  .trait:hover {
+    transform: translateY(-5px);
+  }
+}
+
+@media (max-width: 768px) {
+  .meet-assistant {
+    padding: 80px 0;
+  }
+
+  .section-title {
+    font-size: 2rem;
+  }
+
+  .robot-face {
+    width: 250px;
+    height: 250px;
+  }
+
+  .robot-head {
+    width: 180px;
+    height: 190px;
+  }
+
+  .story-title {
+    font-size: 1.5rem;
+  }
+
+  .use-cases-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .personality-indicator {
+    position: static;
+    margin-top: 1rem;
+    justify-content: center;
+  }
+}
